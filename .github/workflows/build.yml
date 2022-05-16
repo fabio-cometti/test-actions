@@ -1,6 +1,9 @@
 name: Build and Test
 
-on: [push]
+on: 
+  push:
+    branches:    
+      - 'main'
 
 jobs:
   build:
@@ -24,4 +27,5 @@ jobs:
           major_pattern: "(MAJOR)"          
           minor_pattern: "(MINOR)"          
           format: "${major}.${minor}.${patch}" 
-        id: calculate_version #old
+        id: calculate_version #comments
+

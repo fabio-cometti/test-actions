@@ -27,4 +27,4 @@ jobs:
           major_pattern: "(MAJOR)"          
           minor_pattern: "(MINOR)"          
           format: "${major}.${minor}.${patch}" 
-        id: calculate_version
+        id: calculate_version 

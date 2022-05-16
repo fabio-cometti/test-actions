@@ -27,7 +27,7 @@ jobs:
           major_pattern: "(MAJOR)"          
           minor_pattern: "(MINOR)"          
           format: "${major}.${minor}.${patch}"
-        id: calculate_version #comments 123467890000001233444000000
+        id: calculate_version #comments 1234678900000012334440000007777
 
       - uses: rickstaa/action-create-tag@v1
         with:

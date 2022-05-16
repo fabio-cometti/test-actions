@@ -1,0 +1,22 @@
+name: Build and Test
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        dotnet-version: ['6.0.x' ]
+
+    steps: 
+      - uses: paulhatch/semantic-version@v4.0.2
+        name: Calculate version
+        with:  
+          tag_prefix: "v"          
+          major_pattern: "(MAJOR)"          
+          minor_pattern: "(MINOR)"          
+          format: "${major}.${minor}.${patch}" 
+        id: calculate_version

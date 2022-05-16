@@ -31,10 +31,5 @@ jobs:
 
       - uses: rickstaa/action-create-tag@v1
         with:
-          tag: "v{{ steps.calculate_version.outputs.version }}"
-          message: "v{{ steps.calculate_version.outputs.version }}"
-      
-      - uses: rickstaa/action-create-tag@v1
-        with:
-          tag: "v{{ steps.calculate_version.outputs.version }}"
-          message: "v{{ steps.calculate_version.outputs.version }}"
+          tag: "v${{ steps.calculate_version.outputs.version }}"
+          message: "v${{ steps.calculate_version.outputs.version }}"
